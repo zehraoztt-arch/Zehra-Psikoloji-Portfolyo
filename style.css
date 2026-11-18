@@ -1,0 +1,168 @@
+
+/* RENKLER VE GENEL TASARIM */
+:root {
+  --yesil: #557564;
+  --koyu-yesil: #294b3c;
+  --krem: #faf8f2;
+  --beyaz: #ffffff;
+  --yazi: #283b32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--krem);
+  color: var(--yazi);
+  line-height: 1.7;
+}
+
+/* UST MENU */
+header {
+  background-color: var(--yesil);
+  color: var(--beyaz);
+  padding: 35px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  color: var(--beyaz);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--koyu-yesil);
+}
+
+/* ANA ICERIK */
+main {
+  max-width: 1000px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+section {
+  background-color: var(--beyaz);
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+h2, h3, h4 {
+  color: var(--koyu-yesil);
+}
+
+a {
+  color: var(--koyu-yesil);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #b57632;
+  outline-offset: 3px;
+}
+
+/* PROJE KARTLARI */
+.proje-karti {
+  background-color: #eef3ed;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 5px solid var(--yesil);
+}
+
+/* ILETISIM FORMU */
+input, textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 8px 0 18px;
+  border: 1px solid #728679;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  background-color: var(--koyu-yesil);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #416b55;
+}
+
+/* ALT BILGI */
+footer {
+  background-color: var(--koyu-yesil);
+  color: var(--beyaz);
+  text-align: center;
+  padding: 20px;
+}
+
+/* TABLET UYUMU */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
+
+/* TELEFON UYUMU */
+@media (max-width: 480px) {
+  header {
+    padding: 25px 10px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav {
+    gap: 5px;
+  }
+
+  nav a {
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 16px;
+  }
+}

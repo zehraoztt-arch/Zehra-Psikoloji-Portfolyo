@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zehra | Psikoloji Portfolyosu</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f7f6ef;
+      color: #35483b;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #9caf9c;
+      padding: 35px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #263d30;
+      margin: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    section {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 15px;
+    }
+
+    h1, h2 {
+      color: #35483b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #9caf9c;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Merhaba, ben Zehra!</h1>
+    <p>Psikoloji Öğrencisi | Kişisel Portfolyo</p>
+
+    <nav aria-label="Ana menü">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="projeler.html">Projeler</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hakkımda</h2>
+      <p>
+        Bahçeşehir Üniversitesi'nde İngilizce Psikoloji
+        bölümünde eğitim görüyorum. Psikoloji alanındaki
+        bilgilerimi teknolojiyle birleştirmeye ilgi duyuyorum.
+      </p>
+    </section>
+
+    <section>
+      <h2>Eğitim Bilgilerim</h2>
+      <p>Bahçeşehir Üniversitesi - Psikoloji (İngilizce)</p>
+    </section>
+
+    <section>
+      <h2>Projem</h2>
+      <h3>Psikolojik Stres Takip Sistemi</h3>
+      <p>
+        Bu projede psikolojik stres takibi üzerine
+        bir çalışma gerçekleştirdim.
+      </p>
+      <a href="https://github.com/zehraoztt-arch/Psikolojik-Stres-Takip-Sistemi"
+         target="_blank" rel="noopener noreferrer">
+        GitHub'da Projemi Gör
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zehra | Psikoloji Portfolyosu</p>
+  </footer>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const mesajlar = [
+        "Küçük adımlar büyük değişimlerin başlangıcıdır.",
+        "Kendine zaman tanımak gelişimin bir parçasıdır.",
+        "Her yeni gün, öğrenmek için yeni bir fırsattır.",
+        "Kendini anlamak, değişimin ilk adımıdır."
+    ];
+
+    const alan = document.createElement("section");
+
+    alan.innerHTML = `
+        <h2>Günün Motivasyonu</h2>
+        <p>Biraz motivasyona ne dersin?</p>
+        <button id="motivasyonButonu">
+            Motivasyon Mesajı Göster
+        </button>
+        <p id="motivasyonMesaji"></p>
+    `;
+
+    const anaIcerik = document.querySelector("main");
+    const altBilgi = document.querySelector("footer");
+
+    if (anaIcerik) {
+        anaIcerik.appendChild(alan);
+    } else if (altBilgi) {
+        document.body.insertBefore(alan, altBilgi);
+    } else {
+        document.body.appendChild(alan);
+    }
+
+    let mesajSirasi = 0;
+
+    document.getElementById("motivasyonButonu")
+        .addEventListener("click", function () {
+
+            document.getElementById("motivasyonMesaji")
+                .textContent = mesajlar[mesajSirasi];
+
+            mesajSirasi = (mesajSirasi + 1) % mesajlar.length;
+        });
+});
+<script src="script.js"></script>
+</body>
+</html>
