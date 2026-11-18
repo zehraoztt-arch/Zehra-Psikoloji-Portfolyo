@@ -166,3 +166,53 @@ footer {
     padding: 16px;
   }
 }
+
+/* KARANLIK MOD TASARIMI */
+
+body.karanlik-mod {
+    --yesil: #263f35;
+    --koyu-yesil: #1d3029;
+    --krem: #121b17;
+    --beyaz: #25362d;
+    --yazi: #edf4ed;
+}
+
+body.karanlik-mod header,
+body.karanlik-mod footer {
+    color: #ffffff;
+}
+
+body.karanlik-mod nav a {
+    color: #ffffff;
+}
+
+body.karanlik-mod h2,
+body.karanlik-mod h3,
+body.karanlik-mod h4,
+body.karanlik-mod a {
+    color: #c5e5d1;
+}
+
+body.karanlik-mod nav a {
+    color: #ffffff;
+}
+
+body.karanlik-mod .proje-karti {
+    background-color: #30483b;
+}
+
+body.karanlik-mod button {
+    background-color: #476d56;
+    color: #ffffff;
+}
+
+body.karanlik-mod button:hover {
+    background-color: #5d896c;
+}
+
+body.karanlik-mod input,
+body.karanlik-mod textarea {
+    background-color: #30483b;
+    color: #ffffff;
+    border-color: #a4b9a9;
+}

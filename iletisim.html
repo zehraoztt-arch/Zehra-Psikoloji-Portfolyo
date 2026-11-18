@@ -28,9 +28,36 @@
         GitHub Profilimi Ziyaret Et
     </a>
 </p>
+
+<main>
+    <section>
+        <h2>İletişim Formu</h2>
+        <p>Benimle iletişime geçmek için aşağıdaki formu doldurabilirsiniz.</p>
+
+        <form id="iletisimFormu">
+            <label for="ad">Adınız:</label>
+            <input type="text" id="ad" name="ad" required>
+
+            <label for="eposta">E-posta Adresiniz:</label>
+            <input type="email" id="eposta" name="eposta" required>
+
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+            <button type="submit">Gönder</button>
+        </form>
+
+        <p id="formSonucu" role="status" aria-live="polite"></p>
+
+        <p><small>
+            Gizlilik: Bu form yalnızca doğrulama amacıyla hazırlanmıştır.
+            Girilen bilgiler kaydedilmez veya herhangi bir yere gönderilmez.
+        </small></p>
+    </section>
+</main>
     <footer>
         <p>Zehra | Psikoloji Portfolyosu</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
